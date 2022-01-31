@@ -1,4 +1,13 @@
-const printProfile = (profileData) => {
-  const { name, company } = profileData;
-  console.log(`${name} from ${company}`);
+import { printProfile } from './profile';
+
+const userData = {
+  name: 'Tom',
+  age: 17,
 };
+
+const profile = {
+  ...userData,
+  company: 'Gromcode',
+};
+
+printProfile(profile);
