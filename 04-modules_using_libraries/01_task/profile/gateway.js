@@ -1,6 +1,6 @@
 // экспортируйте fetchUser как export по умолчанию
 
-export async function fetchUser(userId) {
+export default async function fetchUser(userId) {
   console.log('implementation for fetchUser');
   const response = await fetch(`https://api.github.com/users/${userId}`);
   if (!response.ok) {
@@ -8,3 +8,4 @@ export async function fetchUser(userId) {
   }
   return await response.json();
 }
+
